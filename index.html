@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <title>Train Schedule</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="header">
+            <div class="jumbotron jumbotron-fluid sunshine">
+                <div class="container">
+                    <h1 class="display-4">"Crazy Train" Train Schedule</h1>
+                    <p class="lead">All aboooooooaaaarrddd!</p>
+                </div>
+            </div>
+        </div>
+        <div class="currentSchedule">
+            <table class="trainTimes">
+                <header id="currentSchedule"><strong>Current Train Schedule</strong></header>
+                <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (mins)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+        <div class="addTrain">
+            <form>
+                <!-- <div class="form-group">
+                    <header class="trainName"><strong> Name</strong></header>
+                    <label for="exampleInputEmail1"></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                </div> -->
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"><strong>Name</strong></label>
+                    <textarea class="form-control" id="newTrainInput" rows="1"></textarea>
+                </div>
+                <!-- <div class="form-group">
+                    <header class="destination"><strong>Destination</strong></header>
+                    <label for="exampleInputEmail1"></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                </div> -->
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"><strong>Destination</strong></label>
+                    <textarea class="form-control" id="destinationInput" rows="1"></textarea>
+                </div>
+                <!-- <div class="form-group">
+                    <header class="firstTrainTime"><strong>First Train Time (HH:mm - military time)</strong></header>
+                    <label for="exampleInputEmail1"></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                </div> -->
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"><strong>First Train Time (HH:mm - military
+                            time)</strong></label>
+                    <textarea class="form-control" id="firstTrainTimeInput" rows="1"></textarea>
+                </div>
+                <!-- <div class="form-group">
+                    <header class="frequency"><strong>Frequency</strong></header>
+                    <label for="exampleInputPassword1"></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                </div> -->
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"><strong>Frequency</strong></label>
+                    <textarea class="form-control" id="frequencyInput" rows="1"></textarea>
+                </div>
+                <!-- <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <button type="submit" class="btn btn-primary" id="submit">Search Train</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="javascript.js"></script>
+
+</html>
